@@ -1,13 +1,12 @@
-import React, {useContext} from 'react';
-import { globalContext } from './UseGlobalContext';
-import Scanqr from './Scanqr';
+import React, { useContext } from "react";
+import { globalContext } from "./UseGlobalContext";
+import Scanqr from "./components/Scanqr";
+import ReactBarcodeScanner from "./components/ReactBarcodeScanner";
 
 function App() {
-  const { qr, setQr } = useContext(globalContext);
   return (
     <div className="App">
       <Scanqr />
-      {qr} 
     </div>
   );
 }
