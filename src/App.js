@@ -1,14 +1,13 @@
 import React, {useContext} from 'react';
-import { globalContext } from './provider';
+import { globalContext } from './UseGlobalContext';
 import Scanqr from './Scanqr';
 
 function App() {
   const { qr, setQr } = useContext(globalContext);
-  console.log(qr);
   return (
     <div className="App">
-      <table></table>
-      <Scanqr />      
+      <Scanqr />
+      {qr} 
     </div>
   );
 }
